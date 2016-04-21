@@ -1,0 +1,12 @@
+#update_cachedir: True
+diff_cache_events: True
+change_password: True
+wait_for_ip_timeout: 600
+display_ssh_output: False
+protocol: ipv4
+script_args: git 2016.3
+log_level: info
+minion:
+  master: saltconf.gtmanfred.com
+  startup_states: highstate
+

@@ -1,0 +1,5 @@
+listen appname 0.0.0.0:80
+    mode http
+{%- for server, ips in salt['mine.get']('web*', 'private_ips').items() %}
+    server {{server}} {{ips[0]}}:80 check
+{%- endfor %}
